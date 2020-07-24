@@ -1,5 +1,5 @@
 class AirPlane:
-    def __init__(self, velocities: [float], Nh: [float], Pe: [float], aspect_ratio: float, W: float, area: float, CD0: float):
+    def __init__(self, velocities: [float], Nh: [float], Pe: [float], aspect_ratio: float, W: float, area: float, CD0: float,e0: float):
         self.aspect_ratio = aspect_ratio
         self.W = W
         self.area = area
@@ -11,6 +11,7 @@ class AirPlane:
         self.Pe = {}
         for index, Pe_value in enumerate(Pe):
             self.Pe[velocities[index]] = Pe_value
+        self.e0 = e0
 
     def to_string(self):
         print("aspect_ratio: {}\nW: {}\narea: {}\nCD0: {}".format(
