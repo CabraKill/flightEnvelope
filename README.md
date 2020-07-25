@@ -41,7 +41,7 @@ The data is saves in *data/* with the min and max velocities with each one a fil
 **Adition:** The altitudes in *data/output_altitudes.txt* are also saved in case of future need.
 
 ```
-📦data
+📂data
  ┣ 📜maxvelocities.txt
  ┣ 📜minvelocities.txt
  ┣ 📜Nh.txt
