@@ -87,8 +87,7 @@ flightEnvelope
 ┃ ┗ __init__.py
 ┣ dependencies.py
 ┣ main.py
-┣ README.md
-┗ read_fix.py
+┗ README.md
 ```
 
 ### Updates and encouragements?
