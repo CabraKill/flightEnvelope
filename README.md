@@ -6,7 +6,10 @@ A a python program to calculate the aerodynamic envelope with its intersections,
   - caculte at a altitude
   - calculate multiple altitudes with a step
 
-![together](readme\together.png)
+![plot](source/plot.png)
+![plot_all](source/plot_all.png)
+
+
 
 ### How to Use it ?
 
@@ -36,6 +39,59 @@ envelope.find_envelope(alt=600, plot=True)
 The data is saves in *data/* with the min and max velocities with each one a file. 
 
 **Adition:** The altitudes in *data/output_altitudes.txt* are also saved in case of future need.
+
+### Files Infrastruct
+
+```
+📦flightEnvelope
+ ┣ 📂readme
+ ┃ ┣ 📜data.PNG
+ ┃ ┣ 📜plot.PNG
+ ┃ ┣ 📜plot_all.PNG
+ ┃ ┗ 📜together.png
+ ┣ 📂src
+ ┃ ┣ 📂classes
+ ┃ ┃ ┃ ┣ 📜airplane.cpython-37.pyc
+ ┃ ┃ ┃ ┣ 📜enviroment.cpython-37.pyc
+ ┃ ┃ ┃ ┣ 📜makedata.cpython-37.pyc
+ ┃ ┃ ┃ ┣ 📜plotdata.cpython-37.pyc
+ ┃ ┃ ┃ ┗ 📜__init__.cpython-37.pyc
+ ┃ ┃ ┣ 📜airplane.py
+ ┃ ┃ ┣ 📜enviroment.py
+ ┃ ┃ ┣ 📜makedata.py
+ ┃ ┃ ┗ 📜__init__.py
+ ┃ ┣ 📂data
+ ┃ ┃ ┣ 📜maxvelocities.txt
+ ┃ ┃ ┣ 📜minvelocities.txt
+ ┃ ┃ ┣ 📜Nh.txt
+ ┃ ┃ ┣ 📜output_altitudes.txt
+ ┃ ┃ ┣ 📜Pe.txt
+ ┃ ┃ ┗ 📜velocities.txt
+ ┃ ┣ 📂driver
+ ┃ ┃ ┃ ┣ 📜envelope.cpython-37.pyc
+ ┃ ┃ ┃ ┣ 📜filedriver.cpython-37.pyc
+ ┃ ┃ ┃ ┣ 📜readfile.cpython-37.pyc
+ ┃ ┃ ┃ ┣ 📜visualization.cpython-37.pyc
+ ┃ ┃ ┃ ┗ 📜__init__.cpython-37.pyc
+ ┃ ┃ ┣ 📜envelope.py
+ ┃ ┃ ┣ 📜filedriver.py
+ ┃ ┃ ┣ 📜visualization.py
+ ┃ ┃ ┗ 📜__init__.py
+ ┃ ┣ 📂functions
+ ┃ ┃ ┃ ┣ 📜intersection.cpython-37.pyc
+ ┃ ┃ ┃ ┗ 📜__init__.cpython-37.pyc
+ ┃ ┃ ┣ 📜intersection.py
+ ┃ ┃ ┗ 📜__init__.py
+ ┃ ┣ 📂model
+ ┃ ┃ ┣ 📜data.py
+ ┃ ┃ ┣ 📜graph.py
+ ┃ ┃ ┗ 📜__init__.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📜dependencies.py
+ ┣ 📜main.py
+ ┣ 📜README.md
+ ┗ 📜read_fix.py
+```
 
 ### Updates and encouragements?
 
