@@ -8,3 +8,4 @@ class Data:
         self.Pe = self._reader.read("src/data/Pe.txt")
         self.min_velocity = []
         self.max_velocity = []
+        self.output_altitudes = []

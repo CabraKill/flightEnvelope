@@ -21,11 +21,12 @@ def main():
 
     envelope = Envelope(makedata=makedata, visualization=visual, data=data)
 
-    #envelope.find_envelope_all(plot=True)
-    envelope.find_envelope(alt=600, plot=True)
+    envelope.find_envelope_all(plot=False)
+    #envelope.find_envelope(alt=600, plot=True)
 
-    #filedriver.write("src/data/minvelocities.txt", data.min_velocity)
-    #filedriver.write("src/data/maxvelocities.txt", data.max_velocity)
+    filedriver.write("src/data/minvelocities.txt", data.min_velocity)
+    filedriver.write("src/data/maxvelocities.txt", data.max_velocity)
+    filedriver.write("src/data/output_altitudes.txt", data.output_altitudes)
 
 
 if __name__ == "__main__":

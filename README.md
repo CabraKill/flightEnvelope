@@ -31,7 +31,16 @@ In the end you just need to work with two mainly functions to plot data, besides
 envelope.find_envelope(alt=600, plot=True)
 ```
 
+### Where can it be catch besides the console ?
+
+The data is saves in *data/* with the min and max velocities with each one a file. 
+
+**Adition:** The altitudes in *data/output_altitudes.txt* are also saved in case of future need.
+
 ### Updates and encouragements?
+
+* plot data with Pandas visualization
+* make a 3d map using the all the plots
 
 
 

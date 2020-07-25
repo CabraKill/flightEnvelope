@@ -27,6 +27,7 @@ class Envelope:
         if len(velocities) > 0:
             self.data.min_velocity.append(min(velocities))
             self.data.max_velocity.append(max(velocities))
+            self.data.output_altitudes.append(alt)
 
     def find_envelope(self, alt: float, plot=False):
         td = self.makedata.td_all(alt)
