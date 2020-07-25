@@ -53,16 +53,14 @@ class MakeData:
         # td = [self.td(alt, velocity)for velocity in self.airplane.velocities]
         td = []
         for velocity in self.airplane.velocities:
-            if velocity > 0:
-                td.append(self.td(alt, velocity))
+            td.append(self.td(alt, velocity))
         return td
 
     def do_all(self, **kwargs):
         value_list = []
         for velocity in self.airplane.velocities:
-            if velocity > 0:
-                value_list.append(kwargs["func"](
-                    alt=kwargs["alt"], velocity=velocity))
+            value_list.append(kwargs["func"](
+                alt=kwargs["alt"], velocity=velocity))
         return value_list
 
     def td_all(self, alt: float):
