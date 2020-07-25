@@ -6,8 +6,8 @@ A a python program to calculate the aerodynamic envelope with its intersections,
   - caculte at a altitude
   - calculate multiple altitudes with a step
 
-![plot](source\plot.PNG)
-![plot_all](source\plot_all.PNG)
+![plot](source/plot.PNG)
+![plot_all](source/plot_all.PNG)
 
 
 
