@@ -12,8 +12,10 @@ class Visualization:
         #plt.plot(values_x, values_y, label=title)
         self.ax.plot(values_x, values_y, label=title)
 
-    def set_title_y(self, title: str):
-        plt.ylabel(title)
+    def set_titles(self, title: str, title_x: str, title_y: str):
+        plt.title(title)
+        plt.xlabel(title_x)
+        plt.ylabel(title_y)
 
     def add_point(self, x: float, y: float):
         plt.scatter(x, y, s=500)
@@ -23,7 +25,8 @@ class Visualization:
                       values_x=self.makedata.airplane.velocities, title="td")
         self.add_plot(values_y=self.makedata.tr_all(alt),
                       values_x=self.makedata.airplane.velocities, title="tr")
-        self.set_title_y(title="Trust")
+        self.set_titles(title="Flight Envelope - {} m".format(alt),
+                        title_x="velocity", title_y="Trust")
         legend = self.ax.legend(frameon=False, ncol=2)
         plt.show()
 

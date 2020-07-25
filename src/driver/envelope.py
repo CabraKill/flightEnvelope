@@ -14,6 +14,8 @@ class Envelope:
 
     def add_intersections(self, alt: float, inter: [tuple], debug=False):
         velocities = []
+        if debug:
+            print("    ", end="")
         for i in inter:
             velocities.append(i[0])
             self.visualization.add_point(x=i[0], y=i[1])
@@ -38,7 +40,7 @@ class Envelope:
             self.visualization.show_envelope(alt)
 
     def find_envelope_all(self, start=0, step=500, interations=20, plot=False):
-        print("Intersections point:\n\t", end="")
+        print("Intersections point:")
         alt = start
         for _ in range(interations):
             self.find_envelope(alt=alt, plot=plot)
