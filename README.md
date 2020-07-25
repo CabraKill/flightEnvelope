@@ -54,40 +54,14 @@ The data is saves in *data/* with the min and max velocities with each one a fil
 
 ```
 flightEnvelope
-┣ 📂source
-┃ ┣ data.PNG
-┃ ┣ plot.PNG
-┃ ┣ plot_all.PNG
-┃ ┗ together.png
 ┣ 📂src
 ┃ ┣ 📂classes
-┃ ┃ ┣ airplane.py
-┃ ┃ ┣ enviroment.py
-┃ ┃ ┣ makedata.py
-┃ ┃ ┗ __init__.py
 ┃ ┣ 📂data
-┃ ┃ ┣ 📜maxvelocities.txt
-┃ ┃ ┣ 📜minvelocities.txt
-┃ ┃ ┣ 📜Nh.txt
-┃ ┃ ┣ 📜output_altitudes.txt
-┃ ┃ ┣ 📜Pe.txt
-┃ ┃ ┗ 📜velocities.txt
 ┃ ┣ 📂driver
-┃ ┃ ┣ envelope.py
-┃ ┃ ┣ filedriver.py
-┃ ┃ ┣ visualization.py
-┃ ┃ ┗ __init__.py
 ┃ ┣ 📂functions
-┃ ┃ ┣ intersection.py
-┃ ┃ ┗ __init__.py
 ┃ ┣ 📂model
-┃ ┃ ┣ data.py
-┃ ┃ ┣ graph.py
-┃ ┃ ┗ __init__.py
-┃ ┗ __init__.py
 ┣ dependencies.py
-┣ main.py
-┗ README.md
+┗ main.py
 ```
 
 ### Updates and encouragements?
