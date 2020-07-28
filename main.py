@@ -17,12 +17,11 @@ def main():
     makedata = MakeData(airplane=airplane,
                         eviroment=enviroment, velocity_step=2)
 
-    visual = Visualization(makedata)
-
-    envelope = Envelope(makedata=makedata, visualization=visual, data=data)
+    envelope = Envelope(makedata=makedata, data=data)
 
     envelope.find_envelope_all(plot=False)
-    #envelope.find_envelope(alt=600, plot=True)
+    
+    #envelope.find_envelope(alt=7200, plot=True)
 
     filedriver.write("src/data/minvelocities.txt", data.min_velocity)
     filedriver.write("src/data/maxvelocities.txt", data.max_velocity)

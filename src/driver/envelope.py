@@ -6,9 +6,9 @@ from src.model.data import Data
 
 
 class Envelope:
-    def __init__(self, makedata: MakeData, visualization: Visualization, data: Data):
+    def __init__(self, makedata: MakeData, data: Data):
         self.makedata = makedata
-        self.visualization = visualization
+        self.visualization = None
         self.intersection = Intersection()
         self.data = data
 
@@ -30,6 +30,7 @@ class Envelope:
             self.data.output_altitudes.append(alt)
 
     def find_envelope(self, alt: float, plot=False):
+        self.visualization = Visualization(makedata=self.makedata)
         td = self.makedata.td_all(alt)
         tr = self.makedata.tr_all(alt)
         graph = Graph(line1=td, line2=tr,
