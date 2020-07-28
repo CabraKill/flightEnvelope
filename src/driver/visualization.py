@@ -21,6 +21,7 @@ class Visualization:
         plt.scatter(x, y, s=500)
 
     def show_envelope(self, alt: float):
+        
         plt.axis([0, 45, 0, 200])
         self.add_plot(values_y=self.makedata.td_all(alt),
                       values_x=self.makedata.airplane.velocities, title="td")

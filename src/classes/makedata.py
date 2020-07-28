@@ -4,10 +4,9 @@ from .airplane import AirPlane
 
 class MakeData:
     # eviroment: env, airplane: airplane, velocity_step: 2
-    def __init__(self, eviroment: Enviroment, airplane: AirPlane, velocity_step: 2):
+    def __init__(self, eviroment: Enviroment, airplane: AirPlane):
         self.enviroment = eviroment
         self.airplane = airplane
-        self.velocity_step = velocity_step
 
     """
     td = ((Pe(w)*Nh(%))/velocity)*(density_for_alt/density_for_0)

@@ -14,18 +14,17 @@ def main():
         Pe=[float(x) for x in data.Pe],
         aspect_ratio=7, W=176.58, area=1.512, CD0=0.002, e0=0.7389)
 
-    makedata = MakeData(airplane=airplane,
-                        eviroment=enviroment, velocity_step=2)
+    makedata = MakeData(airplane=airplane, eviroment=enviroment)
 
     envelope = Envelope(makedata=makedata, data=data)
 
-    envelope.find_envelope_all(plot=False)
-    
+    envelope.find_envelope_all(plot=True)
     #envelope.find_envelope(alt=7200, plot=True)
 
-    filedriver.write("src/data/minvelocities.txt", data.min_velocity)
-    filedriver.write("src/data/maxvelocities.txt", data.max_velocity)
-    filedriver.write("src/data/output_altitudes.txt", data.output_altitudes)
+    data.save()
+    #filedriver.write("src/data/minvelocities.txt", data.min_velocity)
+    #filedriver.write("src/data/maxvelocities.txt", data.max_velocity)
+    #filedriver.write("src/data/output_altitudes.txt", data.output_altitudes)
 
 
 if __name__ == "__main__":
