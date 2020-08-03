@@ -1,5 +1,5 @@
 # flightEnvelope
-A a python program to calculate the aerodynamic envelope with its intersections, futhermore its min and max velocities, according to altitude.
+A python program to calculate the aerodynamic envelope with its intersections, futhermore its min and max velocities, according to altitude.
 
 - features
   - plot graph
