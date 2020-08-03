@@ -5,6 +5,8 @@ A python program to calculate the aerodynamic envelope with its intersections, f
   - plot graph
   - caculte at a altitude
   - calculate multiple altitudes with a step
+  - save all outputs in txt files.
+  - linearization after the calculation to fiz the gaps of velocities. Both values are saved in individuals files.
 
 ![plot](source/plot.PNG)
 ![plot_all](source/plot_all.PNG)
@@ -34,7 +36,7 @@ In the end you just need to work with two mainly functions to plot data, besides
 envelope.find_envelope(alt=600, plot=True)
 ```
 
-### Where can it be catch besides the console ?
+### Where can it be catch besides the console?
 
 The data is saves in *data/* with the min and max velocities with each one a file. 
 
@@ -42,8 +44,10 @@ The data is saves in *data/* with the min and max velocities with each one a fil
 
 ```
 📂data
- ┣ 📜maxvelocities.txt
- ┣ 📜minvelocities.txt
+ ┣ 📜max_velocities.txt
+ ┣ 📜max_velocities_linearized.txt
+ ┣ 📜min_velocities.txt
+ ┣ 📜min_velocities_linearized.txt
  ┣ 📜Nh.txt
  ┣ 📜output_altitudes.txt
  ┣ 📜Pe.txt
