@@ -43,7 +43,7 @@ class Envelope:
         if plot:
             self.visualization.show_envelope(alt)
 
-    def find_envelope_all(self, start=0, step=500, interations=20, plot=False):
+    def find_envelope_all(self, start=0, step=600, interations=20, plot=False):
         print("Intersection points:")
         alt = start
         for i in range(interations):
