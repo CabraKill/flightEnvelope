@@ -5,8 +5,11 @@ from src.classes.makedata import MakeData
 class Visualization:
     def __init__(self, makedata: MakeData):
         self.makedata = makedata
-        self.fig, self.ax = plt.subplots()
+        #self.fig, self.ax = plt.subplots()
         #plt.axis([0, 45, 0, 200])
+
+    def initialize_plot(self):
+        self.fig, self.ax = plt.subplots()
 
     def add_plot(self, values_y: [float], values_x: [float], title: str):
         #plt.plot(values_x, values_y, label=title)
@@ -21,7 +24,7 @@ class Visualization:
         plt.scatter(x, y, s=500)
 
     def show_envelope(self, alt: float):
-        
+
         plt.axis([0, 45, 0, 200])
         self.add_plot(values_y=self.makedata.td_all(alt),
                       values_x=self.makedata.airplane.velocities, title="td")
@@ -31,8 +34,8 @@ class Visualization:
                         title_x="velocity", title_y="Trust")
         legend = self.ax.legend(frameon=False, ncol=2)
         plt.show()
-        #plt.clf()
-    
+        # plt.clf()
+
     def clear(self):
         plt.clf()
 

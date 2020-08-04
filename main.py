@@ -17,8 +17,8 @@ def main():
 
     envelope = Envelope(makedata=makedata, data=data)
 
-    envelope.find_envelope_all(plot=False)
-    # envelope.find_envelope(alt=7200, plot=True)
+    envelope.find_envelope_all(plot=True)
+    #envelope.find_envelope(alt=9990, plot=True)
 
     data.save()
 

@@ -9,7 +9,7 @@ from src.functions.linearization_graph import LinearizationGraph
 class Envelope:
     def __init__(self, makedata: MakeData, data: Data):
         self.makedata = makedata
-        self.visualization = None
+        self.visualization = Visualization(makedata=self.makedata)
         self.intersection = Intersection()
         self.data = data
 
@@ -30,8 +30,9 @@ class Envelope:
             self.data.max_velocity.append(max(velocities))
             self.data.output_altitudes.append(alt)
 
-    def find_envelope(self, line: int, alt: float, plot=False):
-        self.visualization = Visualization(makedata=self.makedata)
+    def find_envelope(self, alt: float, plot=False, line=1):
+        if plot:
+            self.visualization.initialize_plot()
         td = self.makedata.td_all(alt)
         tr = self.makedata.tr_all(alt)
         graph = Graph(line1=td, line2=tr,
@@ -43,11 +44,11 @@ class Envelope:
         if plot:
             self.visualization.show_envelope(alt)
 
-    def find_envelope_all(self, start=0, step=600, interations=20, plot=False):
+    def find_envelope_all(self, start=0, step=600, interations=21, plot=False):
         print("Intersection points:")
         alt = start
         for i in range(interations):
-            self.find_envelope(line=i, alt=alt, plot=plot)
+            self.find_envelope(line=i+1, alt=alt, plot=plot)
             alt += step
         self.data.min_velocity_linearized = LinearizationGraph(
         ).linearization(values=self.data.min_velocity)
