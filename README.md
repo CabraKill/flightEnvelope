@@ -8,10 +8,11 @@ A python program to calculate the aerodynamic envelope with its intersections, f
   - save all outputs in txt files.
   - linearization after the calculation to fiz the gaps of velocities. Both values are saved in individuals files.
 
-<div class="row">
-  <img src="source/plot.PNG" alt="plot">
-  <img src="source/max.PNG" alt="plot">
+<div class="row" align="center">
+  <img src="source/plot.PNG" alt="plot" style="width:45%">
+  <img src="source/max.PNG" alt="plot" style="width:45%">
 </div>
+
 
 ![plot_all](source/plot_all.PNG)
 
